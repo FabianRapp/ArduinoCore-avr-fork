@@ -320,6 +320,14 @@ GENDEPFLAGS = -MD -MP -MF .dep/$(@F).d
 ALL_CFLAGS = -mmcu=$(MCU) -I. $(CFLAGS) $(GENDEPFLAGS)
 ALL_ASFLAGS = -mmcu=$(MCU) -I. -x assembler-with-cpp $(ASFLAGS)
 
+############################################################
+#	Jul 14,	2024	adding make file rule for this fork based of mega2560 rule
+custom_mega2560:	MCU = atmega2560
+custom_mega2560:	F_CPU = 16000000
+custom_mega2560:	BOOTLOADER_ADDRESS = 3E000
+custom_mega2560:	CFLAGS += -D_MEGA_BOARD_
+custom_mega2560:	begin gccversion sizebefore build sizeafter end 
+			mv $(TARGET).hex custom_bootloader.hex
 
 
 ############################################################

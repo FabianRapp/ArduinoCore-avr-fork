@@ -1,3 +1,4 @@
+FORKED REPO, NOT ORIGINAL
 # Arduino AVR Boards
 
 [![Check Arduino status](https://github.com/arduino/ArduinoCore-avr/actions/workflows/check-arduino.yml/badge.svg)](https://github.com/arduino/ArduinoCore-avr/actions/workflows/check-arduino.yml)
